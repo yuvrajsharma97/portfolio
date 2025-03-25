@@ -2,7 +2,7 @@ import React from "react";
 
 const experiences = [
   {
-    date: "Sep 2023 – Oct 2024 (Ongoing)",
+    date: "Sep 2023 – Oct 2024",
     title: "MSc Computer Science – University of Sussex, UK",
     description:
       "Modules: Algorithmic Data Science, Python Programming, Systems for Information Management, MSc Individual Project. Built a ticket booking app using Next.js (frontend) and Python (backend), and developed Computer Science Roadmaps entirely with Next.js.",
