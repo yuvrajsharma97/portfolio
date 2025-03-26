@@ -31,8 +31,8 @@ const AppContent = () => {
         <ThemeToggle />
 
         <a
-          href="/assets/Yuvraj_Sharma_Resume.pdf"
-          download
+          href="/assets/documents/resume_yuvraj_sharma.pdf"
+          target="_blank"
           className={`px-4 py-2 rounded-md text-sm font-semibold shadow-md transition duration-300 hover:scale-105
             ${
               isDarkMode

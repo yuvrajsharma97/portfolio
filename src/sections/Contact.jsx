@@ -62,11 +62,11 @@ const Contact = () => {
   };
 
   return (
-    <div className="p-6 max-w-2xl mx-auto">
+    <div className="max-w-2xl mx-auto">
       <form
         ref={form}
         onSubmit={sendEmail}
-        className="bg-white dark:bg-gray-800 rounded-lg p-6 space-y-6 transition">
+        className="bg-white dark:bg-gray-800 rounded-lg space-y-6 transition">
         {/* Name */}
         <div className="flex flex-col">
           <label
