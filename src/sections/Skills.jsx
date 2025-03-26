@@ -29,12 +29,13 @@ const Skills = () => {
   };
 
   return (
-    <div className="p-6 max-w-4xl mx-auto">
+    <div className="p-6 max-w-5xl mx-auto">
       {/* Skills Section */}
-      <div className="space-y-8">
+      <div className="space-y-10">
         {Object.entries(skillsData).map(([category, skills]) => (
           <div key={category}>
-            <h3 className="text-2xl text-gray-900 dark:text-white mb-4">
+            {/* Section Title */}
+            <h3 className="text-2xl font-semibold text-violet-500 underline mb-4">
               {category}
             </h3>
 
@@ -50,6 +51,7 @@ const Skills = () => {
                     alt={skill.name}
                     className="h-12 w-12 mb-2 rounded-sm p-1"
                     style={{ backgroundColor: "#f7f7f7" }}
+                    loading="lazy"
                   />
                   <p className="text-gray-800 dark:text-gray-300 text-sm font-medium">
                     {skill.name}

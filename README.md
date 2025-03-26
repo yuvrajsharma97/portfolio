@@ -8,7 +8,7 @@ A fully responsive portfolio website built with **React**, **Tailwind CSS**, and
 - 🎨 **Dark/Light Mode Toggle** – Powered by React Context API and persisted in local storage.
 - 🎬 **AOS Animations** – Elegant zoom effects when sections load or modals open.
 - 🖱️ **Modal Interactions** – Click on any section to explore deeper content in modals.
-- 📱 **Fully Responsive** – Works perfectly across all screen sizes and devices.
+- 📱 **Fully Responsive** – Works perfectly across all screen sizes and devices, dynamically adapting layouts for **large (`lg`)**, **medium (`md`)**, and **small (`sm`)** screens.
 - 💅 **Tailwind + DaisyUI** – Fast, beautiful styling with minimal config.
 
 ## 🛠️ Tech Stack

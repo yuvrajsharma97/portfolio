@@ -34,17 +34,19 @@ const Socials = () => {
             href={social.url}
             target="_blank"
             rel="noopener noreferrer"
+            aria-label={`Visit my ${social.platform} profile`}
             className="flex flex-col items-center justify-center p-4 border-2 border-violet-500 rounded-lg shadow-md 
-            bg-white dark:bg-gray-800 transition hover:scale-105 hover:opacity-90">
-            {/* Social Icon */}
+            bg-white dark:bg-gray-800 transition hover:scale-105 hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-violet-400">
+            {/* Icon */}
             <img
               src={social.image}
-              alt={social.platform}
+              alt={`${social.platform} icon`}
               className="h-12 w-12 mb-2 rounded-sm p-1"
+              loading="lazy"
               style={{ backgroundColor: "#f7f7f7" }}
             />
 
-            {/* Social Platform Name */}
+            {/* Platform Name */}
             <p className="text-gray-800 dark:text-gray-300 text-sm font-medium">
               {social.platform}
             </p>

@@ -1,28 +1,41 @@
 import React from "react";
 
 // ProjectCard Component (Stacked Layout)
-const ProjectCard = ({ image, title, description, titleLink, link }) => {
+const ProjectCard = ({ image, title, description, titleLink, link, stack = [] }) => {
   return (
     <div
-      className="relative w-full p-4 rounded-xl border-2 border-violet-500 shadow-lg cursor-pointer hover:scale-105 hover:opacity-90 transition duration-500 ease-in-out 
+      className="relative w-full p-3 rounded-xl border-2 border-violet-500 shadow-lg cursor-pointer hover:scale-105 hover:opacity-90 transition duration-500 ease-in-out 
       bg-violet-50 text-gray-900 dark:bg-gray-800 dark:text-white flex flex-col sm:flex-row items-center flex-wrap overflow-hidden">
-      {/* Image Section (Left for larger screens, Top for smaller screens) */}
+      
+      {/* Image */}
       <div className="w-full sm:w-2/5">
         <img
           src={image}
-          alt={title}
-          className="rounded-lg border-1 border-violet-500 object-cover w-full h-auto max-h-60 sm:max-h-64"
+          alt={title || "Project screenshot"}
+          className="rounded-lg border border-violet-500 object-cover w-full h-auto max-h-60 sm:max-h-64"
+          loading="lazy"
         />
       </div>
 
-      {/* Content Section (Right for larger screens, Below for smaller screens) */}
+      {/* Content */}
       <div className="w-full sm:w-3/5 px-4 py-4 flex flex-col justify-center min-h-full">
-        <h3 className="text-xl font-semibold text-violet-500 break-words">
-          {title}
-        </h3>
+        <h3 className="text-xl font-semibold text-violet-500 break-words">{title}</h3>
         <p className="text-gray-700 dark:text-gray-300 mt-2 break-words">
           {description}
         </p>
+
+        {/* Optional Stack Tags */}
+        {stack.length > 0 && (
+          <div className="flex flex-wrap gap-2 mt-3">
+            {stack.map((tech, index) => (
+              <span
+                key={index}
+                className="text-xs px-2 py-1 border border-violet-500 rounded-full text-violet-700 dark:text-violet-300">
+                {tech}
+              </span>
+            ))}
+          </div>
+        )}
 
         {/* Links */}
         <div className="mt-4 flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-4">
@@ -53,9 +66,10 @@ const Projects = () => {
       image: "/assets/images/csrImage.jpg",
       title: "C.S.R. Website",
       description:
-        "A website that provides roadmaps for computer science students. Built using Next.js and Tailwind CSS for peiple to learn and grow in the field of computer science with no prior knowledge.",
+        "A website that provides roadmaps for computer science students. Built using Next.js and Tailwind CSS for people to learn and grow in the field of computer science with no prior knowledge.",
       titleLink: "https://computer-science-roadmaps.vercel.app/",
       link: "https://github.com/yuvrajsharma97/Computer-Science-Roadmaps",
+      stack: ["Next.js", "Tailwind CSS"],
     },
     {
       image: "/assets/images/pomodoroImage.jpg",
@@ -64,6 +78,7 @@ const Projects = () => {
         "A pomodoro productivity app built using Next.js and Tailwind CSS.",
       titleLink: "https://pomodoro-next-js-chi.vercel.app/",
       link: "https://github.com/yuvrajsharma97/pomodoro-NextJS",
+      stack: ["Next.js", "Tailwind CSS"],
     },
     {
       image: "/assets/images/mefitImage.jpg",
@@ -72,12 +87,12 @@ const Projects = () => {
         "A flexible workout tracker built for continuous improvement.",
       titleLink: "https://mefit-virid.vercel.app/",
       link: "https://github.com/yuvrajsharma97/mefit",
+      stack: ["React", "Tailwind CSS", "Vite"],
     },
   ];
 
   return (
     <div className="p-6">
-      {/* Stacked Layout for Projects */}
       <div className="flex flex-col space-y-6">
         {projectsData.map((project, index) => (
           <ProjectCard key={index} {...project} />

@@ -56,6 +56,7 @@ const BentoBox = () => {
     { image: "/assets/images/js.svg", description: "JavaScript" },
     { image: "/assets/images/react.svg", description: "React" },
     { image: "/assets/images/nextjs.svg", description: "Next Js" },
+    { image: "/assets/images/nodejs.svg", description: "Node.js" },
   ];
 
   useEffect(() => {
@@ -75,7 +76,7 @@ const BentoBox = () => {
 
   return (
     <div className="min-h-screen grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6 overflow-hidden">
-      {/* PROJECTS */}
+      {/* PROJECTS (untouched) */}
       <div
         data-aos="zoom-in"
         className={`${sectionClass} lg:col-span-2 lg:row-span-2 ${
@@ -105,7 +106,7 @@ const BentoBox = () => {
                 openModal({ title: "Projects", content: <Projects /> })
               }
               className={buttonClass}>
-              View More
+              More Projects
             </button>
           </div>
         </div>
@@ -122,7 +123,7 @@ const BentoBox = () => {
           <h2 className="text-2xl text-violet-500 font-semibold underline">
             Skills
           </h2>
-          <div className="flex flex-wrap justify-around mt-4">
+          <div className="flex flex-wrap justify-center gap-3 mt-4">
             {skillsObjectsmall.map((skill, index) => (
               <SkillsCard key={index} {...skill} />
             ))}
@@ -230,7 +231,6 @@ const BentoBox = () => {
           </h2>
 
           <div className="space-y-4 text-base sm:text-lg w-full max-w-md">
-            {/* MSc */}
             <div
               className={`p-4 rounded-xl border shadow-lg backdrop-blur-md transition ${
                 isDarkMode
@@ -248,7 +248,6 @@ const BentoBox = () => {
               </span>
             </div>
 
-            {/* Getepay */}
             <div
               className={`p-4 rounded-xl border shadow-lg backdrop-blur-md transition ${
                 isDarkMode

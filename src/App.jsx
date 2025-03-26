@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import BentoBox from "./components/BentoBox";
 import { ThemeProvider, useTheme } from "./context/ThemeContext";
 import ThemeToggle from "./components/ThemeToggle";
@@ -7,10 +7,11 @@ import "aos/dist/aos.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-// Initialize AOS animations on page load
-AOS.init({ duration: 800, easing: "ease-in-out", once: true });
-
 const App = () => {
+  useEffect(() => {
+    AOS.init({ duration: 800, easing: "ease-in-out", once: true });
+  }, []);
+
   return (
     <ThemeProvider>
       <AppContent />
@@ -21,18 +22,22 @@ const App = () => {
 const AppContent = () => {
   const { isDarkMode } = useTheme();
 
+  const resumeLink = "/assets/documents/resume_yuvraj_sharma.pdf";
+
   return (
     <div
       className={`min-h-screen transition-colors duration-500 ${
         isDarkMode ? "dark bg-gray-900 text-white" : "bg-gray-100 text-black"
       }`}>
-      {/* Top-right Controls: Theme Toggle + Resume Download */}
+      {/* Top Controls */}
       <div className="absolute top-4 right-4 z-50 flex gap-3 items-center">
         <ThemeToggle />
 
         <a
-          href="/assets/documents/resume_yuvraj_sharma.pdf"
+          href={resumeLink}
           target="_blank"
+          download
+          title="Download Resume"
           className={`px-4 py-2 rounded-md text-sm font-semibold shadow-md transition duration-300 hover:scale-105
             ${
               isDarkMode
@@ -43,7 +48,7 @@ const AppContent = () => {
         </a>
       </div>
 
-      {/* Toast Notification Container */}
+      {/* Notifications */}
       <ToastContainer
         position="top-center"
         theme={isDarkMode ? "dark" : "light"}
