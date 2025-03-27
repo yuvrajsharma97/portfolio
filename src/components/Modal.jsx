@@ -23,13 +23,13 @@ const Modal = ({ isOpen, onClose, title, children, animation }) => {
 
   return (
     <div className="fixed inset-0 z-50">
-      {/* Full-page overlay */}
+      {/* Overlay */}
       <div
         className="fixed inset-0 bg-black/70 backdrop-blur-sm transition-opacity duration-300"
         onClick={onClose}
       />
 
-      {/* Modal container */}
+      {/* Modal Container */}
       <div
         className="fixed inset-0 flex items-center justify-center z-50 px-4 py-6 overflow-auto"
         role="dialog"
@@ -39,12 +39,14 @@ const Modal = ({ isOpen, onClose, title, children, animation }) => {
           ref={modalRef}
           tabIndex="-1"
           data-aos={animation}
-          className="bg-[#121212] text-white p-6 md:p-8 rounded-lg shadow-lg w-11/12 md:w-3/4 lg:w-2/3 max-h-[90vh] overflow-y-auto custom-scrollbar focus:outline-none border border-[#555]">
+          className="p-6 md:p-8 rounded-lg shadow-lg w-11/12 md:w-3/4 lg:w-2/3 max-h-[90vh] overflow-y-auto custom-scrollbar focus:outline-none border border-violet-500 text-white"
+          style={{ backgroundColor: "#101828" }} // ✅ Forced background color
+        >
           {/* Modal Header */}
-          <div className="flex justify-between items-center border-b border-[#555] pb-2">
+          <div className="flex justify-between items-center border-b border-violet-500 pb-2">
             <h2
               id="modal-title"
-              className="text-xl font-semibold text-violet-400">
+              className="text-xl font-semibold text-violet-500">
               {title}
             </h2>
             <button
