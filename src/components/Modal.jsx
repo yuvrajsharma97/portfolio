@@ -1,11 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useTheme } from "../context/ThemeContext"; // ✅ ensure this is imported
+import { useTheme } from "../context/ThemeContext";
 
 const Modal = ({ isOpen, onClose, title, children, animation }) => {
   const modalRef = useRef(null);
-  const { isDarkMode } = useTheme(); // ✅ bring in dark mode state
+  const { isDarkMode } = useTheme();
 
   useEffect(() => {
     if (isOpen) {
@@ -14,9 +14,7 @@ const Modal = ({ isOpen, onClose, title, children, animation }) => {
     }
 
     const handleKeyDown = (e) => {
-      if (e.key === "Escape") {
-        onClose();
-      }
+      if (e.key === "Escape") onClose();
     };
 
     document.addEventListener("keydown", handleKeyDown);
@@ -26,10 +24,18 @@ const Modal = ({ isOpen, onClose, title, children, animation }) => {
   if (!isOpen) return null;
 
   return (
-    // ✅ Force dark mode wrapper manually
-    <div className={isDarkMode ? "dark" : ""}>
+    <div className="fixed inset-0 z-50">
+      {/* Full overlay with blur + dark-safe background */}
       <div
-        className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50"
+        className="fixed inset-0 bg-black/70 backdrop-blur-sm transition-opacity duration-300"
+        onClick={onClose}
+      />
+
+      {/* Modal Container (force dark mode manually) */}
+      <div
+        className={`fixed inset-0 flex items-center justify-center z-50 ${
+          isDarkMode ? "dark" : ""
+        }`}
         role="dialog"
         aria-modal="true"
         aria-labelledby="modal-title">
@@ -38,7 +44,7 @@ const Modal = ({ isOpen, onClose, title, children, animation }) => {
           tabIndex="-1"
           data-aos={animation}
           className="bg-white dark:bg-gray-800 p-6 md:p-8 rounded-lg shadow-lg w-11/12 md:w-3/4 lg:w-2/3 max-h-[90vh] overflow-y-auto custom-scrollbar focus:outline-none">
-          {/* Modal Header */}
+          {/* Header */}
           <div className="flex justify-between items-center border-b pb-2">
             <h2
               id="modal-title"
@@ -53,7 +59,7 @@ const Modal = ({ isOpen, onClose, title, children, animation }) => {
             </button>
           </div>
 
-          {/* Modal Body */}
+          {/* Body */}
           <div className="text-gray-800 dark:text-gray-300 mt-4">
             {children}
           </div>
