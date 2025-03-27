@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-const Card = ({ image, title, titleLink, description, link /*, stack */ }) => {
+const Card = ({ image, title, titleLink, description, link, stack }) => {
   useEffect(() => {
     Aos.init(); // AOS animations
   }, []);
@@ -34,8 +34,8 @@ const Card = ({ image, title, titleLink, description, link /*, stack */ }) => {
             {description}
           </p>
 
-      
-          {/* Tech Stack */}
+          
+          
           <div className="flex flex-wrap gap-2 justify-center mb-3">
             {stack?.map((tech, i) => (
               <span
