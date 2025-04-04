@@ -39,14 +39,14 @@ const Modal = ({ isOpen, onClose, title, children, animation }) => {
           ref={modalRef}
           tabIndex="-1"
           data-aos={animation}
-          className="p-6 md:p-8 rounded-lg shadow-lg w-11/12 md:w-3/4 lg:w-2/3 max-h-[90vh] overflow-y-auto custom-scrollbar focus:outline-none border border-violet-500 text-white"
+          className="md:p-8 rounded-lg shadow-lg w-11/12 md:w-3/4 lg:w-2/3 max-h-[90vh] overflow-y-auto custom-scrollbar focus:outline-none border border-violet-500 text-white"
           style={{ backgroundColor: "#101828" }} // ✅ Forced background color
         >
           {/* Modal Header */}
-          <div className="flex justify-between items-center border-b border-violet-500 pb-2">
+          <div className="flex justify-between items-center border-b border-violet-500 py-2 px-6">
             <h2
               id="modal-title"
-              className="text-xl font-semibold text-violet-500">
+              className="text-xl font-semibold text-violet-500 ">
               {title}
             </h2>
             <button

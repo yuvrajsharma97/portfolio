@@ -69,7 +69,7 @@ const Projects = () => {
         "A website that provides roadmaps for computer science students. Built using Next.js and Tailwind CSS for people to learn and grow in the field of computer science with no prior knowledge.",
       titleLink: "https://computer-science-roadmaps.vercel.app/",
       link: "https://github.com/yuvrajsharma97/Computer-Science-Roadmaps",
-      stack: ["Next.js", "Tailwind CSS"],
+      stack: ["Next.js", "Tailwind CSS", "React"],
     },
     {
       image: "/assets/images/pomodoroImage.jpg",
@@ -78,7 +78,7 @@ const Projects = () => {
         "A pomodoro productivity app built using Next.js and Tailwind CSS.",
       titleLink: "https://pomodoro-next-js-chi.vercel.app/",
       link: "https://github.com/yuvrajsharma97/pomodoro-NextJS",
-      stack: ["Next.js", "Tailwind CSS"],
+      stack: ["Next.js", "Tailwind CSS", "React"],
     },
     {
       image: "/assets/images/mefitImage.jpg",
@@ -87,7 +87,7 @@ const Projects = () => {
         "A flexible workout tracker built for continuous improvement.",
       titleLink: "https://mefit-virid.vercel.app/",
       link: "https://github.com/yuvrajsharma97/mefit",
-      stack: ["React", "Tailwind CSS", "Vite"],
+      stack: ["React", "Tailwind CSS", "Vite", "Firebase", "Redux", "Redux Toolkit", "React Router"],
     },
   ];
 

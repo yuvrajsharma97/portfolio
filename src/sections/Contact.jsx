@@ -38,7 +38,7 @@ const Contact = () => {
       .then(
         () => {
           toast.update(toastId, {
-            render: "Message sent successfully! &#127881;",
+            render: "Message sent successfully! 🎉",
             type: "success",
             isLoading: false,
             autoClose: 5000,
@@ -65,13 +65,11 @@ const Contact = () => {
       <form
         ref={form}
         onSubmit={sendEmail}
-        className="bg-white dark:bg-gray-800 rounded-lg space-y-6 transition"
+        className=" text-white rounded-lg space-y-6 transition "
         aria-label="Contact form">
         {/* Name */}
         <div className="flex flex-col">
-          <label
-            htmlFor="user_name"
-            className="text-gray-800 dark:text-gray-300 mb-1 font-medium">
+          <label htmlFor="user_name" className="text-white mb-1 font-medium">
             Name
           </label>
           <input
@@ -82,15 +80,13 @@ const Contact = () => {
             required
             placeholder="Enter your name"
             aria-required="true"
-            className="p-2 rounded-md border border-gray-300 dark:border-gray-600 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white focus:outline-none focus:ring-1 focus:ring-violet-500 shadow-md hover:shadow-xl transition"
+            className="p-2 rounded-md border border-[#444] bg-[#1E293B] text-white focus:outline-none focus:ring-1 focus:ring-violet-500 shadow-md hover:shadow-xl transition"
           />
         </div>
 
         {/* Email */}
         <div className="flex flex-col">
-          <label
-            htmlFor="user_email"
-            className="text-gray-800 dark:text-gray-300 mb-1 font-medium">
+          <label htmlFor="user_email" className="text-white mb-1 font-medium">
             Email
           </label>
           <input
@@ -105,9 +101,9 @@ const Contact = () => {
             aria-required="true"
             className={`p-2 rounded-md border ${
               emailValid
-                ? "border-gray-300 dark:border-gray-600 focus:ring-violet-500"
+                ? "border-[#444] focus:ring-violet-500"
                 : "border-red-500 focus:ring-red-500"
-            } bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white focus:outline-none focus:ring-1 shadow-md hover:shadow-xl transition`}
+            } bg-[#1E293B] text-white focus:outline-none focus:ring-1 shadow-md hover:shadow-xl transition`}
           />
           {!emailValid && (
             <span className="text-sm text-red-500 mt-1">
@@ -118,9 +114,7 @@ const Contact = () => {
 
         {/* Message */}
         <div className="flex flex-col">
-          <label
-            htmlFor="message"
-            className="text-gray-800 dark:text-gray-300 mb-1 font-medium">
+          <label htmlFor="message" className="text-white mb-1 font-medium">
             Message
           </label>
           <textarea
@@ -130,7 +124,7 @@ const Contact = () => {
             required
             placeholder="Write your message here..."
             aria-required="true"
-            className="p-2 rounded-md border border-gray-300 dark:border-gray-600 bg-gray-100 dark:bg-gray-700 text-gray-800 dark:text-white focus:outline-none focus:ring-1 focus:ring-violet-500 shadow-md hover:shadow-xl transition"
+            className="p-2 rounded-md border border-[#444] bg-[#1E293B] text-white focus:outline-none focus:ring-1 focus:ring-violet-500 shadow-md hover:shadow-xl transition"
           />
         </div>
 
