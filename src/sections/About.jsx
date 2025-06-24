@@ -21,8 +21,8 @@ const About = () => {
           Hi, I&apos;m Yuvraj Sharma
         </h2>
         <p className="text-gray-800 dark:text-gray-300 leading-relaxed text-md max-w-lg">
-          I&apos;m a passionate Full Stack MERN Developer with over 3 years of
-          experience building fast, scalable, and user-centric web applications.
+          I&apos;m a experienced Web Developer with over 3 years of experience
+          building fast, scalable, and user-centric web applications.
           <br />
           <br />
           I specialize in crafting clean, maintainable UIs with React and

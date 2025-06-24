@@ -205,8 +205,8 @@ const BentoBox = () => {
             About
           </h2>
           <p className="text-lg mt-2 text-center px-2">
-            I'm a Frontend Developer passionate about building fast, accessible,
-            and beautiful apps using React, Next.js, and Tailwind CSS.
+            I'm a Web Developer and I build fast, accessible, and beautiful apps
+            using React, Next.js, and Tailwind CSS.
           </p>
           <div className="flex justify-center mt-4">
             <button
