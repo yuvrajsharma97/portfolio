@@ -2,6 +2,12 @@
 
 A fully responsive portfolio website built with **React**, **Tailwind CSS**, and **DaisyUI**, showcasing modern front-end development skills. The app uses a **Bento-style layout** with smooth animations (powered by **AOS**) and a clean light/dark theme toggle.
 
+
+## 🌍 Live Demo
+
+- **Preview here:** [portfolio-yuvraj-sharmas-projects.vercel.app](https://portfolio-yuvraj-sharmas-projects.vercel.app)
+
+
 ## 🚀 Features
 
 - ⚡ **Bento Box Layout** – Visually organized sections for Projects, Skills, Experience, Contact, Socials, and About.
