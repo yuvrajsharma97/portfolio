@@ -24,14 +24,11 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-import { Helmet } from "react-helmet";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <ErrorBoundary>
-      
-        <App />
-     
+      <App />
     </ErrorBoundary>
   </StrictMode>
 );
