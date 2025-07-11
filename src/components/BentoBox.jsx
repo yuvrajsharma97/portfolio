@@ -39,13 +39,13 @@ const BentoBox = () => {
       link: "https://github.com/yuvrajsharma97/Computer-Science-Roadmaps",
     },
     {
-      image: "/assets/images/pomodoroImage.jpg",
-      title: "Pomodoro",
+      image: "/assets/images/WorkouttrackImage.jpg",
+      title: "Workout Tracker",
       description:
-        "A pomodoro productivity app built using Next Js and Tailwind CSS.",
-      titleLink: "https://pomodoro-next-js-chi.vercel.app/",
-      link: "https://github.com/yuvrajsharma97/pomodoro-NextJS",
-    },
+        "A personal workout tracker to help users manage and optimize their fitness routines.",
+      titleLink: "https://workouttrack.vercel.app/",
+      link: "https://github.com/yuvrajsharma97/workouttrack",
+    },  
   ];
 
   const projectsDatasmmd = [projectsDatalg[0]];
