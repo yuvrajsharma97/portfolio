@@ -26,7 +26,6 @@ const Contact = () => {
 
     const toastId = toast.loading("Sending your message...");
 
-    // Send notification email to yourself
     emailjs
       .sendForm(
         import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -38,44 +37,15 @@ const Contact = () => {
       )
       .then(
         () => {
-          // Send auto-reply email to the user
-          emailjs
-            .sendForm(
-              import.meta.env.VITE_EMAILJS_SERVICE_ID,
-              import.meta.env.VITE_EMAILJS_AUTO_REPLY_TEMPLATE_ID,
-              form.current,
-              {
-                publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
-              }
-            )
-            .then(
-              () => {
-                toast.update(toastId, {
-                  render: "Message sent successfully! 🎉",
-                  type: "success",
-                  isLoading: false,
-                  autoClose: 5000,
-                  closeButton: true,
-                });
-                form.current.reset();
-                setEmailValid(true);
-              },
-              (error) => {
-                // Auto-reply failed, but main email succeeded
-                toast.update(toastId, {
-                  render: "Message sent! (Auto-reply failed)",
-                  type: "warning",
-                  isLoading: false,
-                  autoClose: 5000,
-                  closeButton: true,
-                });
-                form.current.reset();
-                setEmailValid(true);
-                if (import.meta.env.DEV) {
-                  console.error("Auto-reply Error:", error.text);
-                }
-              }
-            );
+          toast.update(toastId, {
+            render: "Message sent successfully! 🎉",
+            type: "success",
+            isLoading: false,
+            autoClose: 5000,
+            closeButton: true,
+          });
+          form.current.reset();
+          setEmailValid(true);
         },
         (error) => {
           toast.update(toastId, {
