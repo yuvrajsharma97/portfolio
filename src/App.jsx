@@ -33,7 +33,7 @@ const AppContent = () => {
       <div className="absolute top-4 right-4 z-50 flex gap-3 items-center">
         <ThemeToggle />
 
-        <a
+        {/* <a
           href={resumeLink}
           target="_blank"
           download
@@ -45,7 +45,7 @@ const AppContent = () => {
                 : "bg-violet-500 text-white hover:bg-violet-600"
             }`}>
           Download Resume
-        </a>
+        </a> */}
       </div>
 
       {/* Notifications */}
