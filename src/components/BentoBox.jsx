@@ -1,7 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Modal from "./Modal";
-import AOS from "aos";
-import "aos/dist/aos.css";
 import { useTheme } from "../context/ThemeContext";
 import Card from "./Card";
 import SkillsCard from "./SkillCard";
@@ -39,13 +37,13 @@ const BentoBox = () => {
       link: "https://github.com/yuvrajsharma97/Computer-Science-Roadmaps",
     },
     {
-      image: "/assets/images/WorkouttrackImage.jpg",
-      title: "Workout Tracker",
+      image: "/assets/images/loyaltyos.jpg",
+      title: "LoyaltyOS",
       description:
-        "A personal workout tracker to help users manage and optimize their fitness routines.",
-      titleLink: "https://workouttrack.vercel.app/",
-      link: "https://github.com/yuvrajsharma97/workouttrack",
-    },  
+        "A comprehensive loyalty and rewards management system for businesses to engage customers.",
+      titleLink: "https://loyalty-saas-two.vercel.app",
+      link: "https://github.com/yuvrajsharma97/loyalty-saas",
+    },
   ];
 
   const projectsDatasmmd = [projectsDatalg[0]];
@@ -58,10 +56,6 @@ const BentoBox = () => {
     { image: "/assets/images/nextjs.svg", description: "Next Js" },
     { image: "/assets/images/nodejs.svg", description: "Node.js" },
   ];
-
-  useEffect(() => {
-    AOS.init({ duration: 800, easing: "ease-in-out" });
-  }, [isDarkMode]);
 
   const sectionClass = `relative p-8 rounded-xl border-2 border-violet-500 shadow-1xl transition duration-700 ease-in-out`;
 

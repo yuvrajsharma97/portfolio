@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect } from "react";
+import React, { createContext, useContext, useState } from "react";
 
 // Create a Context for managing theme (dark/light mode)
 const ThemeContext = createContext();
@@ -21,14 +21,6 @@ export const ThemeProvider = ({ children }) => {
       return next;
     });
   };
-
-  useEffect(() => {
-    // Sync the initial value if localStorage was updated externally
-    const stored = localStorage.getItem("isDarkMode");
-    if (stored !== null && stored !== String(isDarkMode)) {
-      setIsDarkMode(stored === "true");
-    }
-  }, []);
 
   return (
     <ThemeContext.Provider value={{ isDarkMode, toggleTheme }}>

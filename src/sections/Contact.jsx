@@ -55,7 +55,9 @@ const Contact = () => {
             autoClose: 5000,
             closeButton: true,
           });
-          console.error("EmailJS Error:", error.text);
+          if (import.meta.env.DEV) {
+            console.error("EmailJS Error:", error.text);
+          }
         }
       );
   };
