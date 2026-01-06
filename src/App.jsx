@@ -7,11 +7,8 @@ import "aos/dist/aos.css";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const App = () => {
-  useEffect(() => {
-    AOS.init({ duration: 800, easing: "ease-in-out", once: true });
-  }, []);
 
+const App = () => {
   return (
     <ThemeProvider>
       <AppContent />
@@ -23,6 +20,11 @@ const AppContent = () => {
   const { isDarkMode } = useTheme();
 
   const resumeLink = "/assets/documents/resume_yuvraj_sharma.pdf";
+
+  // Initialize AOS on mount
+  useEffect(() => {
+    AOS.init({ duration: 800, easing: "ease-in-out", once: true });
+  }, [isDarkMode]);
 
   return (
     <div

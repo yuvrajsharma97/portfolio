@@ -74,7 +74,7 @@ const Projects = () => {
       image: "/assets/images/loyaltyos.jpg",
       title: "LoyaltyOS - Digital Loyalty Program SaaS",
       description:
-        "A comprehensive B2B SaaS platform enabling UK businesses to run digital loyalty programs using QR codes. Features include flexible reward systems (visit/spend/hybrid), role-based dashboards for admins/store owners/customers, real-time visit approval workflows, automated point redemption with unique codes, and advanced analytics with CSV/PDF export. Built with Next.js 15 and MongoDB, showcasing modern full-stack architecture with multi-tenancy and JWT authentication.', full-stack architecture with multi-tenancy and JWT authentication.",
+        "B2B SaaS platform enabling businesses to run QR code-based digital loyalty programs with flexible reward systems, role-based dashboards, real-time visit approvals, and advanced analytics. Built with Next.js 15, MongoDB, and NextAuth featuring multi-tenancy architecture.",
       titleLink: "https://loyalty-saas-two.vercel.app",
       link: "https://github.com/yuvrajsharma97/loyalty-saas",
       stack: [
@@ -97,7 +97,7 @@ const Projects = () => {
       image: "/assets/images/csrImage.jpg",
       title: "C.S.R. Website",
       description:
-        "An interactive web application designed to help users discover their ideal computer science career path through a detailed personalized quiz. Features domain-specific roadmaps (Frontend, Backend, Full Stack) with curated free learning resources, confetti animations for quiz completion, and a contact form with EmailJS integration. Built with Next.js and styled using Tailwind CSS and DaisyUI for a modern, responsive experience.",
+        "Interactive career path finder for computer science with personalized quizzes and domain-specific roadmaps (Frontend, Backend, Full Stack). Features curated learning resources, confetti animations, and EmailJS contact form.",
       titleLink: "https://computer-science-roadmaps.vercel.app/",
       link: "https://github.com/yuvrajsharma97/Computer-Science-Roadmaps",
       stack: [
@@ -119,9 +119,9 @@ const Projects = () => {
       image: "/assets/images/getfit.jpg",
       title: "GetFit",
       description:
-        "A full-stack fitness tracking platform featuring personalized onboarding, 1000+ exercise library with ExerciseDB API integration, live workout session tracking with real-time progress monitoring, customizable workout routines, and comprehensive health metrics dashboard tracking steps, calories, water intake, and sleep. Built with React and Firebase showcasing modern state management with Context API and real-time Firestore database synchronization.",
-      titleLink: "https://workouttrack.vercel.app/",
-      link: "https://github.com/yuvrajsharma97/workouttrack",
+        "Full-stack fitness tracker with 1000+ exercise library via ExerciseDB API, live workout sessions, customizable routines, and health metrics dashboard. Built with React, Firebase, and Context API featuring real-time Firestore synchronization.",
+      titleLink: "https://getfit-wheat.vercel.app",
+      link: "https://github.com/yuvrajsharma97/getfit",
       stack: [
         "React.js",
         "Firebase",
@@ -141,9 +141,9 @@ const Projects = () => {
       image: "/assets/images/pomodoroImage.jpg",
       title: "Pomodoro Timer",
       description:
-        "A productivity tool that uses the Pomodoro Technique to help users manage their time effectively.",
-      titleLink: "https://pomodoro-timer.vercel.app/",
-      link: "https://github.com/yuvrajsharma97/pomodoro-timer",
+        "Productivity tool using the Pomodoro Technique for effective time management with customizable work/break intervals. Built with React and Tailwind CSS.",
+      titleLink: "https://pomodoro-next-js-chi.vercel.app",
+      link: "https://github.com/yuvrajsharma97/pomodoro-NextJS",
       stack: ["React", "Tailwind CSS"],
     },
   ];
