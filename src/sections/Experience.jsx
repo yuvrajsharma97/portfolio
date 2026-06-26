@@ -1,31 +1,5 @@
 import React from "react";
-
-const experiences = [
-  {
-    date: "Sep 2023 – Oct 2024",
-    title: "MSc Computer Science – University of Sussex, UK",
-    description:
-      "Modules: Algorithmic Data Science, Python Programming, Systems for Information Management, MSc Individual Project. Built a ticket booking app using Next.js (frontend) and Python (backend), and developed Computer Science Roadmaps entirely with Next.js.",
-  },
-  {
-    date: "Sep 2022 – Aug 2023",
-    title: "Front-End Web Developer – Getepay.in, India",
-    description:
-      "Built a high-performance banking web app using React.js and React Hook Form. Removed 300+ redundant lines of code and integrated REST APIs and payment gateways, reducing load times by 30%.",
-  },
-  {
-    date: "Jan 2021 – Aug 2022",
-    title: "Front-End Web Developer – Ayushi DMCC Software, UAE (Remote)",
-    description:
-      "Developed and deployed 20+ fully responsive websites using React, WordPress, and Bootstrap. Integrated 5+ payment gateways including Razorpay and CCAvenue to enable smooth transactions for 1,000+ users/month.",
-  },
-  {
-    date: "Sep 2020 – Dec 2020",
-    title: "Web Developer Intern – PixelOMedia, India",
-    description:
-      "Delivered 15+ custom WordPress sites and 10+ HTML/CSS/JS templates. Managed full project lifecycle with 98% code quality and 100% on-time delivery, aligning projects to client goals.",
-  },
-];
+import { experiences } from "../data/portfolioData";
 
 const Experience = () => {
   return (

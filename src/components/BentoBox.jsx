@@ -11,6 +11,12 @@ import {
   Socials,
   Experience,
 } from "../sections/SectionExport";
+import {
+  featuredProjects,
+  featuredSkills,
+  featuredExperiences,
+  about,
+} from "../data/portfolioData";
 
 const BentoBox = () => {
   const [modalContent, setModalContent] = useState(null);
@@ -27,35 +33,7 @@ const BentoBox = () => {
     setModalContent(null);
   };
 
-  const projectsDatalg = [
-    {
-      image: "/assets/images/csrImage.jpg",
-      title: "C.S.R. Website",
-      description:
-        "A website that provides roadmaps for computer science students.",
-      titleLink: "https://computer-science-roadmaps.vercel.app/",
-      link: "https://github.com/yuvrajsharma97/Computer-Science-Roadmaps",
-    },
-    {
-      image: "/assets/images/loyaltyos.jpg",
-      title: "LoyaltyOS",
-      description:
-        "A comprehensive loyalty and rewards management system for businesses to engage customers.",
-      titleLink: "https://loyalty-saas-two.vercel.app",
-      link: "https://github.com/yuvrajsharma97/loyalty-saas",
-    },
-  ];
-
-  const projectsDatasmmd = [projectsDatalg[0]];
-
-  const skillsObjectsmall = [
-    { image: "/assets/images/html.svg", description: "HTML" },
-    { image: "/assets/images/css.svg", description: "CSS" },
-    { image: "/assets/images/js.svg", description: "JavaScript" },
-    { image: "/assets/images/react.svg", description: "React" },
-    { image: "/assets/images/nextjs.svg", description: "Next Js" },
-    { image: "/assets/images/nodejs.svg", description: "Node.js" },
-  ];
+  const projectsDatasmmd = [featuredProjects[0]];
 
   const sectionClass = `relative p-8 rounded-xl border-2 border-violet-500 shadow-1xl transition duration-700 ease-in-out`;
 
@@ -83,7 +61,7 @@ const BentoBox = () => {
           </h2>
 
           <div className="hidden lg:flex lg:flex-row lg:items-center my-4">
-            {projectsDatalg.map((project, index) => (
+            {featuredProjects.map((project, index) => (
               <Card key={index} {...project} />
             ))}
           </div>
@@ -118,7 +96,7 @@ const BentoBox = () => {
             Skills
           </h2>
           <div className="flex flex-wrap justify-center gap-3 mt-4">
-            {skillsObjectsmall.map((skill, index) => (
+            {featuredSkills.map((skill, index) => (
               <SkillsCard key={index} {...skill} />
             ))}
           </div>
@@ -199,8 +177,7 @@ const BentoBox = () => {
             About
           </h2>
           <p className="text-lg mt-2 text-center px-2">
-            I'm a Web Developer and I build fast, accessible, and beautiful apps
-            using React, Next.js, and Tailwind CSS.
+            {about.shortBio}
           </p>
           <div className="flex justify-center mt-4">
             <button
@@ -225,37 +202,25 @@ const BentoBox = () => {
           </h2>
 
           <div className="space-y-4 text-base sm:text-lg w-full max-w-md">
-            <div
-              className={`p-4 rounded-xl border shadow-lg backdrop-blur-md transition ${
-                isDarkMode
-                  ? "bg-white/10 border-violet-500 text-white"
-                  : "bg-[#f7f7f7] border-violet-500 text-violet-800"
-              }`}>
-              <span className="font-semibold block">
-                🎓 MSc Computer Science
-              </span>
-              <span
-                className={`text-sm block ${
-                  isDarkMode ? "text-gray-400" : "text-violet-600"
+            {featuredExperiences.map((exp, index) => (
+              <div
+                key={index}
+                className={`p-4 rounded-xl border shadow-lg backdrop-blur-md transition ${
+                  isDarkMode
+                    ? "bg-white/10 border-violet-500 text-white"
+                    : "bg-[#f7f7f7] border-violet-500 text-violet-800"
                 }`}>
-                University of Sussex, 2023–2024
-              </span>
-            </div>
-
-            <div
-              className={`p-4 rounded-xl border shadow-lg backdrop-blur-md transition ${
-                isDarkMode
-                  ? "bg-white/10 border-violet-500 text-white"
-                  : "bg-[#f7f7f7] border-violet-500 text-violet-800"
-              }`}>
-              <span className="font-semibold block">💻 Frontend Developer</span>
-              <span
-                className={`text-sm block ${
-                  isDarkMode ? "text-gray-400" : "text-violet-600"
-                }`}>
-                Getepay.in, India – 2022–2023
-              </span>
-            </div>
+                <span className="font-semibold block">
+                  {exp.icon} {exp.title}
+                </span>
+                <span
+                  className={`text-sm block ${
+                    isDarkMode ? "text-gray-400" : "text-violet-600"
+                  }`}>
+                  {exp.subtitle}
+                </span>
+              </div>
+            ))}
           </div>
 
           <div className="flex justify-center mt-4">

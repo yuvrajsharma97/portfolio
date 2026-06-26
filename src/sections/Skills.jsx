@@ -1,32 +1,7 @@
 import React from "react";
+import { skills as skillsData } from "../data/portfolioData";
 
 const Skills = () => {
-  // Categorized Skills
-  const skillsData = {
-    Languages: [
-      { image: "/assets/images/html.svg", name: "HTML" },
-      { image: "/assets/images/css.svg", name: "CSS" },
-      { image: "/assets/images/js.svg", name: "JavaScript" },
-      { image: "/assets/images/python.svg", name: "Python" },
-      { image: "/assets/images/sql.svg", name: "SQL" },
-      { image: "/assets/images/php.svg", name: "PHP" },
-      { image: "/assets/images/ts.svg", name: "TypeScript" },
-      { image: "/assets/images/scss.svg", name: "SCSS" },
-    ],
-    Frontend: [
-      { image: "/assets/images/react.svg", name: "React" },
-      { image: "/assets/images/nextjs.svg", name: "Next.js" },
-      { image: "/assets/images/tailwindcss.svg", name: "Tailwind CSS" },
-      { image: "/assets/images/mui.svg", name: "Material UI" },
-      { image: "/assets/images/bootstrap.svg", name: "Bootstrap" },
-    ],
-    Backend: [
-      { image: "/assets/images/firebase.svg", name: "Firebase" },
-      { image: "/assets/images/nodejs.svg", name: "Node.js" },
-      { image: "/assets/images/express.svg", name: "Express.js" },
-      { image: "/assets/images/mongodb.svg", name: "MongoDB" },
-    ],
-  };
 
   return (
     <div className="p-6 max-w-5xl mx-auto">

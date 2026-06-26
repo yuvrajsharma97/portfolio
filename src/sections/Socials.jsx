@@ -1,24 +1,8 @@
 import React from "react";
+import { socials as socialMediaLinks } from "../data/portfolioData";
 
 // Socials Component
 const Socials = () => {
-  const socialMediaLinks = [
-    {
-      platform: "LinkedIn",
-      url: "https://www.linkedin.com/in/yuvrajsharma97",
-      image: "/assets/images/linkedin.svg",
-    },
-    {
-      platform: "GitHub",
-      url: "https://github.com/yuvrajsharma97",
-      image: "/assets/images/github.svg",
-    },
-    {
-      platform: "Twitter",
-      url: "https://twitter.com/i_m_yuvraj_s",
-      image: "/assets/images/twitter.svg",
-    },
-  ];
 
   return (
     <div className="p-6 max-w-3xl mx-auto">

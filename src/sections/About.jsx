@@ -1,4 +1,5 @@
 import React from "react";
+import { about } from "../data/portfolioData";
 
 const About = () => {
   return (
@@ -8,8 +9,8 @@ const About = () => {
         <div className="absolute -inset-1 bg-gradient-to-r from-violet-500 to-pink-500 rounded-xl blur-lg opacity-70 group-hover:opacity-90 transition duration-500"></div>
 
         <img
-          src="/assets/images/profile.jpg"
-          alt="Yuvraj Sharma profile picture"
+          src={about.profileImage}
+          alt={`${about.name} profile picture`}
           className="relative z-10 h-48 w-48 object-cover rounded-md shadow-xl border-2 border-white dark:border-gray-800"
           loading="lazy"
         />
@@ -18,21 +19,15 @@ const About = () => {
       {/* Text Content */}
       <div className="text-center sm:text-left flex flex-col items-center sm:items-start">
         <h2 className="text-3xl font-semibold text-gray-900 dark:text-white mb-4">
-          Hi, I&apos;m Yuvraj Sharma
+          Hi, I&apos;m {about.name}
         </h2>
         <p className="text-gray-800 dark:text-gray-300 leading-relaxed text-md max-w-lg">
-          I&apos;m a experienced Web Developer with over 3 years of experience
-          building fast, scalable, and user-centric web applications.
-          <br />
-          <br />
-          I specialize in crafting clean, maintainable UIs with React and
-          solving real-world problems through modern JavaScript ecosystems.
-          I&apos;m a curious builder, constantly exploring new tech while
-          drinking lots of coffee &#9749;.
-          <br />
-          <br />
-          Whether it&apos;s front-end interfaces or end-to-end solutions, I
-          bring creativity, code quality, and performance to every project.
+          {about.fullBio.map((para, i) => (
+            <React.Fragment key={i}>
+              {para}
+              {i < about.fullBio.length - 1 && <><br /><br /></>}
+            </React.Fragment>
+          ))}
         </p>
       </div>
     </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { projects as projectsData } from "../data/portfolioData";
 
 // ProjectCard Component (Stacked Layout)
 const ProjectCard = ({
@@ -69,84 +70,6 @@ const ProjectCard = ({
 
 // Projects Component (Stacked Layout)
 const Projects = () => {
-  const projectsData = [
-    {
-      image: "/assets/images/loyaltyos.jpg",
-      title: "LoyaltyOS - Digital Loyalty Program SaaS",
-      description:
-        "B2B SaaS platform enabling businesses to run QR code-based digital loyalty programs with flexible reward systems, role-based dashboards, real-time visit approvals, and advanced analytics. Built with Next.js 15, MongoDB, and NextAuth featuring multi-tenancy architecture.",
-      titleLink: "https://loyalty-saas-two.vercel.app",
-      link: "https://github.com/yuvrajsharma97/loyalty-saas",
-      stack: [
-        "Next.js 15",
-        "React 19",
-        "MongoDB",
-        "Mongoose",
-        "NextAuth.js",
-        "Tailwind CSS",
-        "DaisyUI",
-        "Zod",
-        "Resend",
-        "QRCode",
-        "Lucide React",
-        "bcryptjs",
-        "Vercel",
-      ],
-    },
-    {
-      image: "/assets/images/csrImage.jpg",
-      title: "C.S.R. Website",
-      description:
-        "Interactive career path finder for computer science with personalized quizzes and domain-specific roadmaps (Frontend, Backend, Full Stack). Features curated learning resources, confetti animations, and EmailJS contact form.",
-      titleLink: "https://computer-science-roadmaps.vercel.app/",
-      link: "https://github.com/yuvrajsharma97/Computer-Science-Roadmaps",
-      stack: [
-        "Next.js",
-        "React.js",
-        "Tailwind CSS",
-        "DaisyUI",
-        "EmailJS",
-        "React Context API",
-        "React Icons",
-        "React Toastify",
-        "React Confetti",
-        "Animate.css",
-        "TW Elements",
-        "Vercel",
-      ],
-    },
-    {
-      image: "/assets/images/getfit.jpg",
-      title: "GetFit",
-      description:
-        "Full-stack fitness tracker with 1000+ exercise library via ExerciseDB API, live workout sessions, customizable routines, and health metrics dashboard. Built with React, Firebase, and Context API featuring real-time Firestore synchronization.",
-      titleLink: "https://getfit-wheat.vercel.app",
-      link: "https://github.com/yuvrajsharma97/getfit",
-      stack: [
-        "React.js",
-        "Firebase",
-        "Firestore",
-        "Firebase Authentication",
-        "Vite",
-        "Tailwind CSS",
-        "DaisyUI",
-        "ExerciseDB API",
-        "React Router",
-        "React Icons",
-        "Axios",
-        "Context API",
-      ],
-    },
-    {
-      image: "/assets/images/pomodoroImage.jpg",
-      title: "Pomodoro Timer",
-      description:
-        "Productivity tool using the Pomodoro Technique for effective time management with customizable work/break intervals. Built with React and Tailwind CSS.",
-      titleLink: "https://pomodoro-next-js-chi.vercel.app",
-      link: "https://github.com/yuvrajsharma97/pomodoro-NextJS",
-      stack: ["React", "Tailwind CSS"],
-    },
-  ];
 
   return (
     <div className="p-6">
